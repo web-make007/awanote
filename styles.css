@@ -33,6 +33,8 @@ body {
   font-size: 16px;
   line-height: 1.8;
   overflow-x: hidden;
+  line-break: strict;
+  word-break: normal;
 }
 
 img {
@@ -129,10 +131,11 @@ a {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(460px, 0.96fr) minmax(520px, 1.04fr);
+  grid-template-columns: minmax(430px, 0.98fr) minmax(460px, 1.02fr);
   align-items: center;
   min-height: 520px;
   padding: 26px 0 64px;
+  gap: clamp(28px, 4vw, 58px);
 }
 
 .hero::after {
@@ -153,18 +156,26 @@ a {
   color: var(--blue);
   font-weight: 800;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .hero h1 {
   margin: 0 0 24px;
   color: var(--blue-dark);
-  font-size: clamp(34px, 3.4vw, 46px);
-  line-height: 1.42;
+  max-width: 13em;
+  font-size: clamp(38px, 4.2vw, 58px);
+  line-height: 1.34;
   letter-spacing: 0;
 }
 
-.hero h1 span {
+.heading-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero h1 em {
   color: var(--yellow);
+  font-style: normal;
   font-size: 1.1em;
 }
 
@@ -176,7 +187,7 @@ a {
   max-width: 610px;
   margin: 0 0 10px;
   font-weight: 700;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .hero-actions {
@@ -238,6 +249,7 @@ h2 {
   line-height: 1.45;
   text-align: center;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .section-line {
@@ -254,10 +266,10 @@ h2 {
 
 .worry-layout {
   display: grid;
-  grid-template-columns: 225px minmax(260px, 440px) 225px;
+  grid-template-columns: minmax(210px, 240px) minmax(280px, 420px) minmax(210px, 240px);
   align-items: center;
   justify-content: center;
-  gap: 34px;
+  gap: clamp(22px, 4vw, 42px);
   margin-top: 20px;
 }
 
@@ -267,16 +279,19 @@ h2 {
 }
 
 .speech-card {
-  min-height: 72px;
-  padding: 17px 18px;
+  display: grid;
+  place-items: center;
+  min-height: 76px;
+  padding: 16px 18px;
   color: var(--ink);
   background: #fff;
   border: 1px solid #e4eefb;
   border-radius: var(--radius);
   box-shadow: 0 8px 18px rgba(31, 84, 150, 0.09);
   font-weight: 800;
-  line-height: 1.55;
+  line-height: 1.5;
   text-align: center;
+  text-wrap: balance;
 }
 
 .worry-people {
@@ -299,14 +314,16 @@ h2 {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: start;
-  gap: 18px;
+  gap: clamp(14px, 1.7vw, 22px);
   margin-top: 28px;
 }
 
 .result-card {
   position: relative;
-  min-height: 330px;
-  padding: 32px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 336px;
+  padding: 32px 16px 18px;
   background: #fff;
   border: 1px solid #dfebfb;
   border-radius: var(--radius);
@@ -333,12 +350,15 @@ h2 {
 }
 
 .result-card h3 {
-  min-height: 58px;
+  display: grid;
+  place-items: center;
+  min-height: 54px;
   margin: 0 0 14px;
   color: var(--blue);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.45;
   text-align: center;
+  text-wrap: balance;
 }
 
 .result-card img {
@@ -354,11 +374,12 @@ h2 {
   font-size: 13px;
   font-weight: 700;
   line-height: 1.65;
+  text-wrap: pretty;
 }
 
 .about-panel {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 1.08fr);
   align-items: center;
   gap: 24px;
   margin-top: 22px;
@@ -440,6 +461,7 @@ h2 {
 .local-seo-copy p {
   margin: 0;
   font-weight: 700;
+  text-wrap: pretty;
 }
 
 .local-seo-copy p + p {
@@ -466,6 +488,7 @@ h2 {
   margin: 0;
   font-weight: 700;
   line-height: 1.7;
+  text-wrap: pretty;
 }
 
 .thought-grid {
@@ -495,7 +518,8 @@ h2 {
   margin: 0;
   color: var(--ink);
   font-size: 18px;
-  line-height: 1.75;
+  line-height: 1.65;
+  text-wrap: balance;
 }
 
 .mission {
@@ -560,12 +584,14 @@ h2 {
   color: var(--blue);
   font-size: 20px;
   line-height: 1.35;
+  text-wrap: balance;
 }
 
 .reason-card p {
   margin: 0;
   font-weight: 700;
   line-height: 1.65;
+  text-wrap: pretty;
 }
 
 .reason-card.featured {
@@ -620,6 +646,8 @@ h2 {
   box-shadow: 0 10px 22px rgba(31, 84, 150, 0.08);
   font-size: 18px;
   font-weight: 900;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .service-grid img {
@@ -667,6 +695,7 @@ h2 {
   color: var(--blue);
   font-size: 20px;
   line-height: 1.45;
+  text-wrap: balance;
 }
 
 .easy-grid p,
@@ -675,6 +704,7 @@ h2 {
   margin: 0;
   font-weight: 700;
   line-height: 1.75;
+  text-wrap: pretty;
 }
 
 .area-section {
@@ -691,8 +721,8 @@ h2 {
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 28px);
   margin-top: 26px;
 }
 
@@ -722,7 +752,7 @@ h2 {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
+  gap: clamp(14px, 1.7vw, 18px);
   margin-top: 26px;
 }
 
@@ -755,8 +785,9 @@ h2 {
 .process-grid h3 {
   margin: 0 0 6px;
   color: var(--blue);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.35;
+  text-wrap: balance;
 }
 
 .process-grid p {
@@ -821,6 +852,7 @@ h2 {
 .price-card p:last-child {
   margin: 0;
   font-weight: 700;
+  text-wrap: pretty;
 }
 
 .faq-grid {
@@ -844,6 +876,7 @@ summary {
   cursor: pointer;
   font-weight: 800;
   list-style: none;
+  line-height: 1.55;
 }
 
 summary::-webkit-details-marker {
@@ -873,9 +906,9 @@ details p {
 
 .cta-section {
   display: grid;
-  grid-template-columns: 165px minmax(240px, 1fr) 310px 205px;
+  grid-template-columns: 140px minmax(280px, 1fr) minmax(230px, 300px) 170px;
   align-items: center;
-  gap: 22px;
+  gap: clamp(16px, 2.4vw, 26px);
   margin-top: 24px;
   margin-bottom: 28px;
   padding: 24px 28px;
@@ -889,7 +922,9 @@ details p {
 
 .cta-section h2 {
   color: var(--blue-dark);
-  font-size: 28px;
+  max-width: 15em;
+  font-size: clamp(24px, 2.7vw, 30px);
+  line-height: 1.45;
   text-align: left;
 }
 
@@ -905,11 +940,11 @@ details p {
 }
 
 .cta-shop {
-  width: 155px;
+  width: min(135px, 100%);
 }
 
 .cta-people {
-  width: 205px;
+  width: min(170px, 100%);
 }
 
 .site-footer {
@@ -967,11 +1002,18 @@ details p {
   .hero {
     grid-template-columns: 1fr;
     padding-top: 22px;
+    text-align: center;
   }
 
   .hero-copy {
     position: relative;
     z-index: 2;
+    display: grid;
+    justify-items: center;
+  }
+
+  .hero h1 {
+    max-width: none;
   }
 
   .hero-visual {
@@ -1001,6 +1043,11 @@ details p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .result-cards,
+  .process-grid {
+    align-items: stretch;
+  }
+
   .result-card.is-lower,
   .price-card.recommended {
     margin-top: 0;
@@ -1026,6 +1073,10 @@ details p {
     text-align: center;
   }
 
+  .local-seo-copy {
+    padding: 28px;
+  }
+
   .reason-card.featured {
     grid-column: auto;
     grid-row: auto;
@@ -1034,16 +1085,25 @@ details p {
   .cta-section {
     justify-items: center;
     text-align: center;
+    grid-template-columns: minmax(0, 1fr);
+    padding-inline: 28px;
   }
 
   .cta-section h2 {
+    max-width: 18em;
     text-align: center;
+  }
+
+  .cta-shop,
+  .cta-people {
+    display: none;
   }
 }
 
 @media (max-width: 640px) {
   body {
     font-size: 15px;
+    line-height: 1.75;
   }
 
   .section,
@@ -1063,16 +1123,22 @@ details p {
   .global-nav {
     justify-content: flex-start;
     font-size: 13px;
+    gap: 16px;
   }
 
   .hero {
     min-height: auto;
-    padding-bottom: 36px;
+    padding-bottom: 34px;
   }
 
   .hero h1 {
-    font-size: 32px;
-    overflow-wrap: anywhere;
+    font-size: clamp(24px, 7.4vw, 38px);
+    line-height: 1.34;
+    overflow-wrap: break-word;
+  }
+
+  .hero-copy p {
+    text-align: left;
   }
 
   .hero-actions {
@@ -1097,7 +1163,7 @@ details p {
 
   .hero-photo-frame {
     width: 100%;
-    height: 340px;
+    height: min(420px, 96vw);
     border-radius: 14px;
   }
 
@@ -1112,6 +1178,16 @@ details p {
 
   .result-card {
     min-height: auto;
+    padding-inline: 20px;
+  }
+
+  .result-card h3 {
+    min-height: 0;
+    font-size: 18px;
+  }
+
+  .result-card img {
+    max-height: 210px;
   }
 
   .about-panel {
@@ -1127,15 +1203,32 @@ details p {
     gap: 8px;
   }
 
+  .about-icons strong {
+    font-size: 20px;
+  }
+
   .about-icons img {
-    width: 82px;
-    height: 82px;
+    width: min(72px, 22vw);
+    height: min(72px, 22vw);
   }
 
   .reason-card,
   .service-grid article {
     align-items: flex-start;
     justify-content: flex-start;
+  }
+
+  .reason-card {
+    padding: 22px 20px;
+  }
+
+  .reason-card img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .service-grid article {
+    min-height: 86px;
   }
 
   .area-section {
@@ -1148,5 +1241,39 @@ details p {
 
   .cta-section {
     padding: 22px 18px;
+  }
+
+  .cta-section h2 {
+    font-size: 24px;
+  }
+
+  .site-footer {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section,
+  .site-header,
+  .site-footer {
+    width: min(1120px, calc(100% - 22px));
+  }
+
+  .hero h1 {
+    font-size: clamp(24px, 7.2vw, 29px);
+  }
+
+  .button {
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+  .speech-card,
+  .local-seo-copy,
+  .local-seo-list article,
+  .easy-grid article,
+  .target-grid article,
+  .price-card {
+    padding-inline: 16px;
   }
 }
