@@ -381,6 +381,15 @@ h2 {
   margin-top: 28px;
 }
 
+.results-lead {
+  max-width: 720px;
+  margin: 12px auto 0;
+  color: var(--text);
+  font-weight: 800;
+  text-align: center;
+  text-wrap: balance;
+}
+
 .result-card {
   position: relative;
   display: flex;
