@@ -651,15 +651,14 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.9) translateY(-3%);
 }
 
 .member-photo-left img {
-  object-position: 21% 58%;
+  object-position: 50% 42%;
 }
 
 .member-photo-right img {
-  object-position: 84% 58%;
+  object-position: 50% 44%;
 }
 
 .member-role {
