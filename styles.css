@@ -471,10 +471,10 @@ h2 {
 .result-cards {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: end;
-  gap: clamp(18px, 2vw, 34px);
-  width: min(1600px, 100%);
-  margin: 72px auto 0;
+  align-items: start;
+  gap: clamp(20px, 2.1vw, 36px);
+  width: min(1460px, 100%);
+  margin: 74px auto 0;
 }
 
 .results-lead {
@@ -490,13 +490,17 @@ h2 {
 .result-card {
   position: relative;
   display: grid;
-  grid-template-rows: 124px 1fr auto;
-  min-height: 610px;
+  grid-template-rows: 116px 1fr auto;
+  min-height: 470px;
   overflow: hidden;
   background: #fff;
   border: 1px solid #dbe8fb;
   border-radius: 14px;
   box-shadow: 0 16px 34px rgba(31, 84, 150, 0.12);
+}
+
+.result-card.is-lower {
+  margin-top: 78px;
 }
 
 .result-card h3 {
@@ -505,11 +509,11 @@ h2 {
   display: grid;
   place-items: center;
   margin: 0;
-  padding: 16px 16px 34px;
+  padding: 18px 16px 28px;
   color: #fff;
   background: var(--blue);
-  font-size: 20px;
-  line-height: 1.35;
+  font-size: 18px;
+  line-height: 1.42;
   text-align: center;
   text-wrap: balance;
 }
@@ -517,7 +521,7 @@ h2 {
 .result-card h3::after {
   position: absolute;
   inset: auto 0 -1px 0;
-  height: 46px;
+  height: 42px;
   content: "";
   background: #fff;
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
@@ -539,12 +543,12 @@ h2 {
   position: absolute;
   inset: auto 0 0;
   margin: 0;
-  padding: 22px 18px 20px;
+  padding: 18px 16px 16px;
   color: #fff;
   background: linear-gradient(180deg, rgba(55, 92, 160, 0.16), rgba(49, 85, 151, 0.72));
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 1.62;
+  line-height: 1.6;
   text-wrap: pretty;
 }
 
@@ -1486,6 +1490,10 @@ details p {
     align-items: stretch;
   }
 
+  .result-card.is-lower {
+    margin-top: 0;
+  }
+
   .price-card.recommended {
     margin-top: 0;
     transform: none;
@@ -1809,6 +1817,10 @@ details p {
     min-height: 520px;
     padding: 0;
     scroll-snap-align: start;
+  }
+
+  .result-card.is-lower {
+    margin-top: 0;
   }
 
   .result-card h3 {
