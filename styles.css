@@ -258,8 +258,8 @@ a {
   position: relative;
   z-index: 1;
   width: min(720px, 108%);
-  min-height: 460px;
-  margin-left: 70px;
+  min-height: 470px;
+  margin-left: 34px;
   overflow: visible;
 }
 
@@ -289,24 +289,12 @@ a {
   pointer-events: none;
 }
 
-.hero-laptop {
+.hero-figure {
   display: block;
-  width: min(555px, 78%);
-  margin-top: 70px;
-  margin-left: -8px;
+  width: min(700px, 100%);
+  margin-top: 26px;
+  margin-left: 4px;
   filter: drop-shadow(0 20px 22px rgba(26, 62, 112, 0.13));
-}
-
-.hero-person {
-  position: absolute;
-  right: -8px;
-  bottom: 6px;
-  width: min(340px, 47%);
-  filter: drop-shadow(0 22px 24px rgba(26, 62, 112, 0.14));
-}
-
-.hero-laptop,
-.hero-person {
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 92%, transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 92%, transparent 100%);
 }
@@ -566,9 +554,10 @@ h2 {
 
 .about-photo img {
   width: 100%;
-  aspect-ratio: 1.95;
+  aspect-ratio: 1.58;
   object-fit: cover;
-  border-radius: 56px 56px 56px 12px;
+  object-position: center;
+  border-radius: 56px 56px 56px 16px;
   box-shadow: 0 18px 42px rgba(31, 84, 150, 0.12);
 }
 
@@ -607,6 +596,26 @@ h2 {
   line-height: 1.85;
   text-align: center;
   text-wrap: balance;
+}
+
+.thought-map,
+.thought-city {
+  position: absolute;
+  pointer-events: none;
+}
+
+.thought-map {
+  right: 48px;
+  top: 124px;
+  width: min(290px, 23vw);
+  opacity: 0.95;
+}
+
+.thought-city {
+  left: 28px;
+  bottom: 28px;
+  width: min(170px, 14vw);
+  opacity: 0.92;
 }
 
 .members-section {
@@ -1002,6 +1011,10 @@ h2 {
 
 .works-grid img {
   width: 100%;
+  aspect-ratio: 1 / 0.72;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 6px;
   filter: drop-shadow(0 12px 12px rgba(22, 50, 96, 0.16));
 }
 
@@ -1325,13 +1338,10 @@ details p {
     margin-left: 0;
   }
 
-  .hero-laptop {
-    width: min(440px, 75%);
-    margin-top: 48px;
-  }
-
-  .hero-person {
-    width: min(258px, 42%);
+  .hero-figure {
+    width: min(600px, 100%);
+    margin-top: 16px;
+    margin-left: 0;
   }
 
   .worry-layout {
@@ -1407,6 +1417,18 @@ details p {
   .thought-card::before,
   .thought-card::after {
     display: none;
+  }
+
+  .thought-map {
+    right: 8px;
+    top: 96px;
+    width: 180px;
+  }
+
+  .thought-city {
+    left: 18px;
+    bottom: 24px;
+    width: 112px;
   }
 
   .member-card {
@@ -1565,16 +1587,10 @@ details p {
     height: 84px;
   }
 
-  .hero-laptop {
-    width: 84%;
-    margin-top: 38px;
-    margin-left: -10px;
-  }
-
-  .hero-person {
-    right: -2px;
-    bottom: 6px;
-    width: 49%;
+  .hero-figure {
+    width: 100%;
+    margin-top: 18px;
+    margin-left: 0;
   }
 
   .result-cards,
@@ -1670,6 +1686,11 @@ details p {
   }
 
   .thought-section::before {
+    display: none;
+  }
+
+  .thought-map,
+  .thought-city {
     display: none;
   }
 
@@ -1927,13 +1948,9 @@ details p {
     min-height: 250px;
   }
 
-  .hero-laptop {
-    width: 86%;
-    margin-top: 34px;
-  }
-
-  .hero-person {
-    width: 50%;
+  .hero-figure {
+    width: 100%;
+    margin-top: 20px;
   }
 
   .button {
