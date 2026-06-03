@@ -455,6 +455,10 @@ h2 {
   padding-block: 34px;
 }
 
+.results-section {
+  width: min(1680px, calc(100% - 64px));
+}
+
 .service-section {
   width: min(1240px, calc(100% - 48px));
   padding: 38px 0 48px;
@@ -467,15 +471,17 @@ h2 {
 .result-cards {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: start;
-  gap: clamp(14px, 1.7vw, 22px);
-  margin-top: 28px;
+  align-items: end;
+  gap: clamp(18px, 2vw, 34px);
+  width: min(1600px, 100%);
+  margin: 72px auto 0;
 }
 
 .results-lead {
   max-width: 720px;
-  margin: 12px auto 0;
+  margin: 18px auto 0;
   color: var(--text);
+  font-size: 19px;
   font-weight: 800;
   text-align: center;
   text-wrap: balance;
@@ -483,60 +489,62 @@ h2 {
 
 .result-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 336px;
-  padding: 32px 16px 18px;
-  background: #fff;
-  border: 1px solid #dfebfb;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.result-card.is-lower {
-  margin-top: 42px;
-}
-
-.result-card span {
-  position: absolute;
-  left: -10px;
-  top: -12px;
   display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  color: #fff;
-  background: var(--blue);
-  border-radius: 999px;
-  font-size: 20px;
-  font-weight: 900;
+  grid-template-rows: 124px 1fr auto;
+  min-height: 610px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dbe8fb;
+  border-radius: 14px;
+  box-shadow: 0 16px 34px rgba(31, 84, 150, 0.12);
 }
 
 .result-card h3 {
+  position: relative;
+  z-index: 1;
   display: grid;
   place-items: center;
-  min-height: 54px;
-  margin: 0 0 14px;
-  color: var(--blue);
-  font-size: 16px;
-  line-height: 1.45;
+  margin: 0;
+  padding: 16px 16px 34px;
+  color: #fff;
+  background: var(--blue);
+  font-size: 20px;
+  line-height: 1.35;
   text-align: center;
   text-wrap: balance;
 }
 
+.result-card h3::after {
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 46px;
+  content: "";
+  background: #fff;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.result-card h3 span {
+  position: relative;
+  z-index: 1;
+}
+
 .result-card img {
   width: 100%;
-  aspect-ratio: 1.45;
+  height: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .result-card p {
-  margin: 13px 0 0;
-  color: var(--text);
-  font-size: 13px;
+  position: absolute;
+  inset: auto 0 0;
+  margin: 0;
+  padding: 22px 18px 20px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(55, 92, 160, 0.16), rgba(49, 85, 151, 0.72));
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.65;
+  line-height: 1.62;
   text-wrap: pretty;
 }
 
@@ -1478,7 +1486,6 @@ details p {
     align-items: stretch;
   }
 
-  .result-card.is-lower,
   .price-card.recommended {
     margin-top: 0;
     transform: none;
@@ -1799,24 +1806,25 @@ details p {
 
   .result-card {
     flex: 0 0 min(292px, 78vw);
-    min-height: 0;
-    padding: 28px 16px 18px;
+    min-height: 520px;
+    padding: 0;
     scroll-snap-align: start;
-  }
-
-  .result-card.is-lower {
-    margin-top: 0;
   }
 
   .result-card h3 {
     min-height: 0;
-    justify-content: start;
-    text-align: left;
-    font-size: 17px;
+    padding: 14px 12px 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .result-card h3::after {
+    height: 28px;
   }
 
   .result-card p {
-    font-size: 13px;
+    padding: 14px 12px;
+    font-size: 14px;
   }
 
   .about-panel,
