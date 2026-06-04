@@ -921,9 +921,9 @@ h2 {
 
 .reason-card.featured img {
   justify-self: start;
-  width: 74px;
-  height: 74px;
-  margin: 0 0 20px 18px;
+  width: 92px;
+  height: 92px;
+  margin: 12px 0 20px 58px;
   object-fit: contain;
 }
 
@@ -2582,9 +2582,9 @@ details p {
   }
 
   .reason-card.featured img {
-    width: 64px;
-    height: 64px;
-    margin: 2px 0 18px 14px;
+    width: 90px;
+    height: 90px;
+    margin: 12px 0 18px 52px;
   }
 
   .reason-card.featured h3 {
