@@ -923,6 +923,7 @@ h2 {
   grid-column: 2;
   grid-row: 1 / span 2;
   align-content: center;
+  justify-items: center;
   display: grid;
   text-align: center;
   border: 2px solid #f3c454;
@@ -930,10 +931,10 @@ h2 {
 }
 
 .reason-card.featured img {
-  justify-self: start;
-  width: 92px;
-  height: 92px;
-  margin: 12px 0 20px 58px;
+  justify-self: center;
+  width: 78px;
+  height: 78px;
+  margin: 0 0 24px;
   object-fit: contain;
 }
 
@@ -2592,9 +2593,9 @@ details p {
   }
 
   .reason-card.featured img {
-    width: 90px;
-    height: 90px;
-    margin: 12px 0 18px 52px;
+    width: 76px;
+    height: 76px;
+    margin: 2px 0 20px;
   }
 
   .reason-card.featured h3 {
