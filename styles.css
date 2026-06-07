@@ -75,8 +75,8 @@ a {
 }
 
 .logo img {
-  width: 220px;
-  height: 72px;
+  width: 148px;
+  height: 48px;
   object-fit: contain;
   object-position: left center;
 }
@@ -932,9 +932,9 @@ h2 {
 
 .reason-card.featured img {
   justify-self: center;
-  width: 86px;
-  height: 86px;
-  margin: 2px 0 22px;
+  width: 156px;
+  height: 156px;
+  margin: -6px 0 8px;
   object-fit: contain;
 }
 
@@ -2313,8 +2313,8 @@ details p {
   }
 
   .logo img {
-    width: 196px;
-    height: 66px;
+    width: 132px;
+    height: 44px;
   }
 
   .global-nav {
@@ -2593,9 +2593,9 @@ details p {
   }
 
   .reason-card.featured img {
-    width: 84px;
-    height: 84px;
-    margin: 4px 0 18px;
+    width: 152px;
+    height: 152px;
+    margin: -2px 0 6px;
   }
 
   .reason-card.featured h3 {
