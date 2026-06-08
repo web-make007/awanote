@@ -96,6 +96,10 @@ a {
   transition: color 0.2s ease;
 }
 
+.global-nav a.is-active {
+  color: var(--blue);
+}
+
 .global-nav a:hover,
 .global-nav a:focus-visible {
   color: var(--blue);
