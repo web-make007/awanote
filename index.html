@@ -28,7 +28,11 @@
     <meta name="twitter:image" content="https://web-make007.github.io/misemiru/img/ミセミル_全素材_透過PNG/image1_メイン素材/02_hero_02_ノートPC.png" />
     <link rel="icon" type="image/png" href="./img/ChatGPT Image 2026年6月3日 16_26_44.png" />
     <link rel="apple-touch-icon" href="./img/ChatGPT Image 2026年6月3日 16_26_44.png" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="stylesheet" href="./styles/hero.css" />
+    <link rel="stylesheet" href="./styles/sections.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
     <script type="application/ld+json">
       {
             "@context": "https://schema.org",
@@ -565,79 +569,6 @@
         <a class="button button-line" href="https://lin.ee/sjFqlRQ" target="_blank" rel="noreferrer">LINEで相談する</a>
       </div>
     </footer>
-    <script>
-      (() => {
-        const navItems = Array.from(document.querySelectorAll(".global-nav a[href^='#']"))
-          .map((link) => {
-            const targetId = link.getAttribute("href")?.slice(1);
-            if (!targetId) return null;
-            const section = document.getElementById(targetId);
-            return section ? { link, section } : null;
-          })
-          .filter(Boolean);
-
-        if (navItems.length === 0) return;
-
-        const header = document.querySelector(".site-header");
-        const sectionItems = [...navItems].sort((leftItem, rightItem) => leftItem.section.offsetTop - rightItem.section.offsetTop);
-        let activeLink = null;
-        let ticking = false;
-
-        const setActiveLink = (nextActiveLink) => {
-          if (activeLink === nextActiveLink) return;
-          activeLink = nextActiveLink;
-
-          navItems.forEach(({ link }) => {
-            const isActive = link === nextActiveLink;
-            link.classList.toggle("is-active", isActive);
-            if (isActive) {
-              link.setAttribute("aria-current", "page");
-            } else {
-              link.removeAttribute("aria-current");
-            }
-          });
-        };
-
-        const updateActiveSection = () => {
-          const headerHeight = header?.offsetHeight ?? 0;
-          const markerY = window.scrollY + headerHeight + Math.min(window.innerHeight * 0.18, 140);
-          let currentItem = null;
-
-          for (const item of sectionItems) {
-            if (item.section.offsetTop <= markerY) {
-              currentItem = item;
-            } else {
-              break;
-            }
-          }
-
-          if (!currentItem && markerY < sectionItems[0].section.offsetTop) {
-            setActiveLink(null);
-          } else {
-            setActiveLink(currentItem?.link ?? sectionItems[sectionItems.length - 1].link);
-          }
-
-          ticking = false;
-        };
-
-        const requestActiveSectionUpdate = () => {
-          if (ticking) return;
-          ticking = true;
-          window.requestAnimationFrame(updateActiveSection);
-        };
-
-        navItems.forEach(({ link }) => {
-          link.addEventListener("click", () => {
-            setActiveLink(link);
-            window.requestAnimationFrame(updateActiveSection);
-          });
-        });
-
-        window.addEventListener("scroll", requestActiveSectionUpdate, { passive: true });
-        window.addEventListener("resize", requestActiveSectionUpdate);
-        window.addEventListener("load", requestActiveSectionUpdate);
-        requestActiveSectionUpdate();
-      })();
-    </script>
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
