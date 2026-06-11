@@ -115,3 +115,8 @@
 .header-cta.line-cta:focus-visible {
   background: #0d9f4a;
 }
+
+.mobile-quick-nav,
+.mobile-consult-bar {
+  display: none;
+}

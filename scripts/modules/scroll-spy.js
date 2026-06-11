@@ -2,7 +2,7 @@ const ACTIVE_CLASS_NAME = "is-active";
 const ACTIVE_ATTRIBUTE_NAME = "aria-current";
 const ACTIVE_ATTRIBUTE_VALUE = "page";
 const DEFAULT_HEADER_SELECTOR = ".site-header";
-const DEFAULT_NAV_SELECTOR = ".global-nav a[href^='#']";
+const DEFAULT_NAV_SELECTOR = ".global-nav a[href^='#'], .mobile-quick-nav a[href^='#']";
 
 const getSectionTop = (section) => section.getBoundingClientRect().top + window.scrollY;
 
