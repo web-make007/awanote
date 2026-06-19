@@ -93,6 +93,7 @@ class ImageSlotElement extends HTMLElement {
     }
 
     if (source) {
+      image.loading = slotId.startsWith("cta-") ? "eager" : "lazy";
       image.src = source;
       this.dataset.filled = "true";
     }
