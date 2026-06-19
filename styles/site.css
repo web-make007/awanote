@@ -346,7 +346,7 @@ image-slot { --_b: var(--slot-bg); }
   display: flex; gap: 18px; align-items: flex-start;
 }
 .reason-card image-slot { width: 64px !important; height: 64px !important; flex: none; --slot-frame-bg: transparent; }
-.reason-card image-slot::part(image) { object-fit: contain; }
+.reason-card image-slot::part(image) { object-fit: contain; transform: scale(1.45); transform-origin: center; }
 .reason-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .reason-card p { color: var(--muted); font-size: .9rem; }
 .reason-card.featured {
@@ -387,6 +387,7 @@ image-slot { --_b: var(--slot-bg); }
   background: rgba(255,255,255,.16);
   --slot-frame-bg: transparent;
 }
+.reason-card.featured image-slot::part(image) { transform: scale(1.65); }
 .reason-card.featured h3 { position: relative; z-index: 1; }
 .reason-card.featured p { color: rgba(255,255,255,.85); position: relative; z-index: 1; }
 .reason-card.featured strong {
@@ -405,6 +406,7 @@ image-slot { --_b: var(--slot-bg); }
 }
 .works-grid figure { margin: 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); }
 .works-grid image-slot { width: 100%; height: 200px; display: block; }
+.works-grid image-slot::part(image) { object-position: top center; }
 .works-grid figcaption { font-family: var(--font-head); font-weight: 700; padding: 14px; font-size: .95rem; }
 .works-section .note, .price-section .note { margin-top: 30px; color: var(--muted); font-size: .9rem; }
 
@@ -970,6 +972,7 @@ p { margin: 0; text-wrap: pretty; }
 .works-rail::-webkit-scrollbar { display: none; }
 .work-card { flex: 0 0 78%; scroll-snap-align: center; border-radius: var(--r); overflow: hidden; border: 1px solid var(--hair); background: #fff; box-shadow: var(--shadow-card); }
 .work-card image-slot { width: 100%; aspect-ratio: 16 / 10; display: block; --slot-frame-bg: var(--brand-soft); }
+.work-card image-slot::part(image) { object-position: top center; }
 .work-card figcaption { padding: 12px 14px; font-family: var(--font-head); font-weight: 700; font-size: .9rem; color: var(--ink-2); }
 .works-note, .member-note { margin-top: 16px; color: var(--muted); font-size: .86rem; line-height: 1.7; }
 
