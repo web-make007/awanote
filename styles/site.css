@@ -258,6 +258,7 @@ image-slot { --_b: var(--slot-bg); }
 .result-card image-slot {
   width: 100%; height: 120px; margin-bottom: 14px; display: block;
 }
+.result-card image-slot::part(image) { object-position: top center; }
 .result-card p { font-size: .86rem; color: var(--muted); }
 
 /* ---------- about ---------- */
@@ -404,8 +405,7 @@ image-slot { --_b: var(--slot-bg); }
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
 .works-grid figure { margin: 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); }
-.works-grid image-slot { width: 100%; height: 200px; display: block; }
-.works-grid image-slot::part(image) { object-position: top center; }
+.works-grid img { width: 100%; height: 200px; object-fit: cover; object-position: top center; display: block; }
 .works-grid figcaption { font-family: var(--font-head); font-weight: 700; padding: 14px; font-size: .95rem; }
 .works-section .note, .price-section .note { margin-top: 30px; color: var(--muted); font-size: .9rem; }
 
@@ -970,8 +970,7 @@ p { margin: 0; text-wrap: pretty; }
 .works-rail { display: flex; gap: 13px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 4px 18px 14px; margin: 0 -18px; scrollbar-width: none; }
 .works-rail::-webkit-scrollbar { display: none; }
 .work-card { flex: 0 0 78%; scroll-snap-align: center; border-radius: var(--r); overflow: hidden; border: 1px solid var(--hair); background: #fff; box-shadow: var(--shadow-card); }
-.work-card image-slot { width: 100%; aspect-ratio: 16 / 10; display: block; --slot-frame-bg: var(--brand-soft); }
-.work-card image-slot::part(image) { object-position: top center; }
+.work-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; display: block; background: var(--brand-soft); }
 .work-card figcaption { padding: 12px 14px; font-family: var(--font-head); font-weight: 700; font-size: .9rem; color: var(--ink-2); }
 .works-note, .member-note { margin-top: 16px; color: var(--muted); font-size: .86rem; line-height: 1.7; }
 
