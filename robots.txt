@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://web-make007.github.io/misemiru/sitemap.xml
+Sitemap: https://web-make007.github.io/awanote/sitemap.xml
