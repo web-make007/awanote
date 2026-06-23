@@ -18,8 +18,8 @@ const IMAGE_SLOT_SOURCES = {
   "reason-icon-3": "./img/site/reason-idea.png",
   "reason-icon-4": "./img/site/reason-local.png",
   "reason-icon-5": "./img/site/reason-support.png",
-  "member-1": "./img/member-matsueda.jpg",
-  "member-2": "./img/member-arai.jpg",
+  "member-1": "./img/site/member-matsueda-face.jpg",
+  "member-2": "./img/site/member-arai-face.jpg",
   "m-bn-1": "./img/site/result-consult-final.png",
   "m-bn-2": "./img/site/result-mobile-final.png",
   "m-bn-3": "./img/site/result-line-final.png",
@@ -31,8 +31,8 @@ const IMAGE_SLOT_SOURCES = {
   "m-reason-2": "./img/site/reason-idea.png",
   "m-reason-3": "./img/site/reason-local.png",
   "m-reason-4": "./img/site/reason-support.png",
-  "m-member-1": "./img/member-matsueda.jpg",
-  "m-member-2": "./img/member-arai.jpg",
+  "m-member-1": "./img/site/member-matsueda-face.jpg",
+  "m-member-2": "./img/site/member-arai-face.jpg",
 };
 
 class ImageSlotElement extends HTMLElement {
