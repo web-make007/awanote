@@ -14,7 +14,7 @@ const IMAGE_SLOT_SOURCES = {
   "about-icon-3": "./img/ミセミル_全素材_透過PNG/image1_メイン素材/10_illust_10_地域店舗アイコン.png",
   "about-photo": "./img/site/about-photo-final.png",
   "reason-icon-1": "./img/site/reason-speed.png",
-  "reason-icon-2": "./img/site/reason-crown-clean.png",
+  "reason-icon-2": "./img/ミセミル_全素材_透過PNG/images5/レイヤー 1.png",
   "reason-icon-3": "./img/site/reason-idea.png",
   "reason-icon-4": "./img/site/reason-local.png",
   "reason-icon-5": "./img/site/reason-support.png",

@@ -498,9 +498,6 @@ image-slot { --_b: var(--slot-bg); }
 }
 .cta-section h2 { color: #fff; font-size: calc(1.9rem * var(--heading-scale)); max-width: 22em; }
 .cta-section > div p { color: rgba(255,255,255,.85); margin-top: 12px; }
-.cta-shop, .cta-people { position: absolute; bottom: 24px; width: clamp(120px, 16vw, 200px); height: clamp(120px, 16vw, 200px); object-fit: contain; }
-.cta-shop { left: clamp(8px, 4vw, 60px); }
-.cta-people { right: clamp(8px, 4vw, 60px); }
 .cta-actions { position: relative; z-index: 1; }
 .cta-section .button-line { background: #fff; color: var(--line-deep); }
 .cta-section .button-line::before { background: var(--line); }
@@ -576,7 +573,6 @@ body.move-mode .move-hint { display: block; }
   .member-card { grid-template-columns: 110px 1fr; gap: 16px; padding: 20px; }
   .member-photo image-slot { width: 110px; height: 110px; }
   .site-footer { grid-template-columns: 1fr 1fr; }
-  .cta-shop, .cta-people { position: relative; left: auto; right: auto; bottom: auto; }
 
   .mobile-consult-bar {
     display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
@@ -635,9 +631,8 @@ body.move-mode .move-hint { display: block; }
   /* catch-all: never allow a sliver of horizontal scroll on phones */
   html, body { overflow-x: hidden; }
 
-  /* CTA: hide the (author-zeroed) decorative slots and tighten the big padding */
+  /* CTA: tighten the desktop-authored padding on narrow screens. */
   .cta-section { padding: 52px 16px !important; }
-  .cta-shop, .cta-people { display: none !important; }
 }
 
 
