@@ -1,5 +1,5 @@
 /* =========================================================================
-   トクシル レスポンシブ統合スタイル
+   アワノテ レスポンシブ統合スタイル
    ・PCデザイン（styles.css）は幅900px以上で適用
    ・スマホデザイン（mobile.css）は幅899px以下で適用
    両者は @media で排他的に有効化されるため :root / body / * / keyframes は衝突しない
@@ -13,7 +13,7 @@
 /* ===================== PC（≥900px）===================== */
 @media (min-width: 900px) {
 /* ===========================================================================
-   トクシル / トクシル — Web Site Editor
+   アワノテ / アワノテ — Web Site Editor
    全ての見た目は CSS 変数で制御し、Tweaks パネルからライブで変更できます。
    画像はすべて <image-slot>（空の差し込み枠）です。
    =========================================================================== */
@@ -128,6 +128,7 @@ image-slot { --_b: var(--slot-bg); }
   border-bottom: 1px solid var(--hair);
 }
 .site-header .logo { display: block; }
+.site-logo-img { width: 132px; height: auto; display: block; }
 .logo-slot { width: 150px; height: 42px; --slot-frame-bg: transparent; }
 .text-logo {
   display: inline-flex;
@@ -148,6 +149,7 @@ image-slot { --_b: var(--slot-bg); }
   letter-spacing: .1em;
 }
 .footer-logo { margin-bottom: 10px; }
+.footer-logo-img { width: 150px; height: auto; display: block; margin-bottom: 16px; }
 /* The logo bitmap has a baked-in white background. On the white header,
    multiply blends that white away while leaving the logo's colors intact. */
 .site-header .logo-slot::part(image) { mix-blend-mode: multiply; }
@@ -641,11 +643,11 @@ body.move-mode .move-hint { display: block; }
 /* ===================== スマホ（≤899px）===================== */
 @media (max-width: 899px) {
 /* ===========================================================================
-   トクシル — スマホ版サイト（TUNAGサービスサイトの「造り」を踏襲）
+   アワノテ — スマホ版サイト（TUNAGサービスサイトの「造り」を踏襲）
    ・追従ヘッダー＋ハンバーガードロワー（下部バーなし）
    ・大きなキャッチコピー＋スマホ画面モックのヒーロー（3バリエーション内蔵）
    ・スクリーンショット風のサービス紹介
-   白基調 × トクシル青。信頼感重視のきれいめ（控えめ角丸・シャープ）。
+   白基調 × アワノテ青。信頼感重視のきれいめ（控えめ角丸・シャープ）。
    =========================================================================== */
 
 :root {
@@ -732,8 +734,8 @@ p { margin: 0; text-wrap: pretty; }
 }
 .brand.text-logo span { font-size: 1.08rem; font-weight: 900; }
 .brand.text-logo small { font-size: .55rem; color: var(--brand-2); font-weight: 800; letter-spacing: .08em; }
-.brand-img { height: 30px; width: auto; display: block; }
-.drawer-top .brand-img { height: 32px; }
+.brand-img { width: 108px; height: auto; display: block; }
+.drawer-top .brand-img { width: 112px; height: auto; }
 .brand-logo {
   width: 30px; height: 30px; border-radius: 9px; overflow: hidden;
   background: var(--brand);
@@ -1026,7 +1028,7 @@ details.faq .ans { padding: 0 16px 16px 51px; color: var(--muted); font-size: .8
 /* footer */
 .app-footer { padding: 30px 20px 30px; background: #0f1d36; color: #9fb0cc; }
 .app-footer .f-brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 800; font-size: 1.08rem; color: #fff; }
-.app-footer .f-brand .f-logo { width: 36px; height: 36px; object-fit: contain; display: block; }
+.app-footer .f-brand .f-logo { width: 132px; height: auto; object-fit: contain; display: block; }
 .app-footer .f-lead { margin: 13px 0 18px; font-size: .82rem; line-height: 1.85; }
 .app-footer .f-block { padding: 14px 0; border-top: 1px solid rgba(255, 255, 255, .1); }
 .app-footer .f-block h4 { font-size: .82rem; font-weight: 800; color: #fff; margin-bottom: 6px; letter-spacing: .03em; }
