@@ -56,7 +56,7 @@
 /* ===================== PC（≥900px）===================== */
 @media (min-width: 900px) {
 /* ===========================================================================
-   アワノテ / ミセミル — Web Site Editor
+   アワノテ — Web Site Editor
    全ての見た目は CSS 変数で制御し、Tweaks パネルからライブで変更できます。
    画像はすべて <image-slot>（空の差し込み枠）です。
    =========================================================================== */
@@ -470,6 +470,38 @@ image-slot { --_b: var(--slot-bg); }
 .process-grid h3 { font-size: .98rem; margin-bottom: 6px; }
 .process-grid p { color: var(--muted); font-size: .82rem; }
 
+/* ── 01-M 徳島Web制作SEOセクション ── */
+.local-seo-section {
+  background: linear-gradient(180deg, #fff, var(--bg-alt));
+  text-align: center;
+}
+.local-seo-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: clamp(16px,4vw,40px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  text-align: left;
+}
+.local-seo-grid article {
+  background: #fff;
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 26px 24px;
+}
+.local-seo-grid h3 {
+  color: var(--brand);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.local-seo-grid p {
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.9;
+}
+
 /* ── 01-M メンバーセクション ── */
 .members-section { background: var(--bg-alt); text-align: center; }
 .member-grid {
@@ -596,6 +628,7 @@ body.move-mode .move-hint { display: block; }
   .price-grid { grid-template-columns: 1fr; }
   .price-card.recommended { transform: none; }
   .process-grid { grid-template-columns: 1fr 1fr; }
+  .local-seo-grid { grid-template-columns: 1fr; }
   .member-grid { grid-template-columns: 1fr; }
   .member-card { grid-template-columns: 110px 1fr; gap: 16px; padding: 20px; }
   .member-photo image-slot { width: 110px; height: 110px; }
@@ -997,6 +1030,31 @@ p { margin: 0; text-wrap: pretty; }
 .step h4 { font-weight: 800; font-size: .98rem; margin: 4px 0 2px; }
 .step p { color: var(--muted); font-size: .85rem; line-height: 1.6; }
 
+/* local SEO */
+.local-seo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.local-seo-list article {
+  background: #fff;
+  border: 1px solid var(--hair);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+}
+.local-seo-list h3 {
+  color: var(--brand);
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.local-seo-list p {
+  color: var(--muted);
+  font-size: .87rem;
+  line-height: 1.7;
+}
+
 /* members */
 .member-list { display: flex; flex-direction: column; gap: 12px; }
 .member-row { display: flex; gap: 14px; align-items: center; padding: 16px; background: #fff; border: 1px solid var(--hair); border-radius: var(--r-lg); box-shadow: var(--shadow-soft); }
@@ -1203,4 +1261,418 @@ details.faq .ans { padding: 0 16px 16px 51px; color: var(--muted); font-size: .8
   .sec-title { font-size: 2.3rem; }
 }
 
+}
+
+
+/* === Migrated inline styles from index.html ===
+   These utility classes preserve editor-authored layout values while keeping
+   presentational CSS out of the HTML. Prefer semantic classes for new edits. */
+.u-migrated-0030d7 {
+  margin: -4px 0px 24px !important;
+}
+.u-migrated-005f83 {
+  width: 417px !important;
+  height: 264px !important;
+}
+.u-migrated-00fb8f {
+  margin: -2px 0px 0px -5px !important;
+  width: 65px !important;
+  height: 65px !important;
+}
+.u-migrated-01d166 {
+  padding: 16px 20px 16px 34px !important;
+}
+.u-migrated-01dd3e {
+  padding: 71px 0px 0px !important;
+  height: 578px !important;
+  width: 1211px !important;
+}
+.u-migrated-056e36 {
+  padding: 10px 20px 20px !important;
+}
+.u-migrated-07f2ab {
+  padding: 0px 15px !important;
+  height: 80px !important;
+  border-width: 1px !important;
+  margin: 0px !important;
+}
+.u-migrated-0dc224 {
+  padding: 50px 0px 0px !important;
+  height: 502px !important;
+}
+.u-migrated-107aa7 {
+  padding: 6px 16px !important;
+  margin: -41px 0px 28px !important;
+}
+.u-migrated-12d3f8 {
+  padding: 14px 30px !important;
+  margin: 0px !important;
+}
+.u-migrated-171951 {
+  padding: 16px 20px 16px 44px !important;
+}
+.u-migrated-1a79c0 {
+  margin: -6px 0px 0px -7px !important;
+  width: 65px !important;
+  height: 65px !important;
+}
+.u-migrated-1b417f {
+  width: 100px !important;
+  height: 100px !important;
+}
+.u-migrated-1c7259 {
+  margin: 31px 0px 0px !important;
+}
+.u-migrated-1de800 {
+  height: 7502px !important;
+}
+.u-migrated-1ea006 {
+  width: 30px !important;
+  height: 30px !important;
+}
+.u-migrated-1f08f8 {
+  width: 190px !important;
+  height: 71px !important;
+}
+.u-migrated-1f38ee {
+  margin: 0px 0px 4px !important;
+}
+.u-migrated-1f4e56 {
+  padding: 0px 0px 0px 40px !important;
+}
+.u-migrated-21e9d7 {
+  font-family: " !important;
+  font-weight: 700 !important;
+}
+.u-migrated-233aad {
+  margin: 0px 0px 21px !important;
+}
+.u-migrated-25a5a5 {
+  padding: 46px 18px !important;
+  margin: 0px 0px 30px !important;
+}
+.u-migrated-28ca4f {
+  width: 571px !important;
+}
+.u-migrated-2e03b8 {
+  height: 617px !important;
+}
+.u-migrated-322907 {
+  margin: 12px 0px 0px !important;
+}
+.u-migrated-37439f {
+  height: 70px !important;
+  width: 65px !important;
+  margin: -4px 0px 0px !important;
+}
+.u-migrated-377040 {
+  padding: 22px 16px !important;
+  margin: 36px 0px 0px !important;
+}
+.u-migrated-3d5f09 {
+  width: 0px !important;
+}
+.u-migrated-407dc6 {
+  height: 81px !important;
+  margin: 0px !important;
+}
+.u-migrated-42a060 {
+  margin: 13px 0px 0px !important;
+}
+.u-migrated-438b99 {
+  width: 683px !important;
+}
+.u-migrated-444e82 {
+  font-size: 16px !important;
+  width: 72px !important;
+  height: 72px !important;
+}
+.u-migrated-476d3e {
+  margin: 59px 0px 0px !important;
+}
+.u-migrated-47b6f4 {
+  height: 449px !important;
+  padding: 62px 0px 96px !important;
+}
+.u-migrated-47e801 {
+  width: 451px !important;
+}
+.u-migrated-4b84f2 {
+  margin: -3px 0px 0px !important;
+}
+.u-migrated-4cc5bc {
+  margin: 61px 0px 18px !important;
+  color: rgb(20, 86, 196) !important;
+}
+.u-migrated-4e8683 {
+  font-weight: 800 !important;
+  text-align: right !important;
+  font-size: 15px !important;
+  font-family: " !important;
+}
+.u-migrated-4f8254 {
+  margin: 26px 0px 0px !important;
+}
+.u-migrated-51d196 {
+  padding: 16px 20px 16px 21px !important;
+  font-size: 16px !important;
+  margin: 0px 0px 0px -3px !important;
+  border-width: 0px !important;
+  border-style: solid !important;
+}
+.u-migrated-59f2f2 {
+  padding: 0px 0px 0px 2px !important;
+}
+.u-migrated-5ae1ea {
+  margin: 3px 0px 0px 7px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.u-migrated-5aed9e {
+  height: 81px !important;
+  padding: 0px 2px 0px 0px !important;
+}
+.u-migrated-5db75d {
+  font-weight: 700 !important;
+}
+.u-migrated-5e36f5 {
+  margin: 22px 0px 0px !important;
+}
+.u-migrated-5f1fd0 {
+  padding: 40px 20px 34px !important;
+}
+.u-migrated-60cbbd {
+  margin: 10px 0px 6px !important;
+}
+.u-migrated-65f9d5 {
+  text-align: center !important;
+}
+.u-migrated-6b861b {
+  margin: -6px 0px 0px -5px !important;
+  width: 65px !important;
+  height: 65px !important;
+}
+.u-migrated-6bd75d {
+  margin: 36px 0px 0px !important;
+}
+.u-migrated-6dfaec {
+  width: 208px !important;
+  padding: 22px 1px 22px 16px !important;
+}
+.u-migrated-700232 {
+  height: 466px !important;
+  width: 351px !important;
+  opacity: 1 !important;
+  margin: 0px 0px 0px 122px !important;
+}
+.u-migrated-739422 {
+  margin: 0px !important;
+  height: 81px !important;
+}
+.u-migrated-73c554 {
+  padding: 0px !important;
+}
+.u-migrated-7a9f58 {
+  margin: -2px 0px 0px !important;
+}
+.u-migrated-7c11bd {
+  padding: 16px 20px 16px 26px !important;
+}
+.u-migrated-7c9697 {
+  height: 80px !important;
+  width: 65px !important;
+  margin: 0px 0px 0px -12px !important;
+  border-radius: 13px 0px 0px 13px !important;
+  font-size: 23px !important;
+}
+.u-migrated-7da4e8 {
+  font-size: 16px !important;
+}
+.u-migrated-7fd4f5 {
+  width: 0px !important;
+  height: 0px !important;
+}
+.u-migrated-80e9aa {
+  padding: 67px 0px !important;
+}
+.u-migrated-856ec5 {
+  height: 80px !important;
+  margin: 0px 0px 0px -12px !important;
+  width: 65px !important;
+  border-radius: 13px 0px 0px 13px !important;
+  font-size: 23px !important;
+}
+.u-migrated-887ec8 {
+  padding: 0px 40px 0px 19px !important;
+}
+.u-migrated-8a69a4 {
+  margin: 5px 0px 0px 5px !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0px 10px 0px 0px !important;
+}
+.u-migrated-908baa {
+  font-size: 17px !important;
+  margin: 4px 0px 0px !important;
+}
+.u-migrated-90da83 {
+  margin: 5px 0px 0px 4px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.u-migrated-961963 {
+  margin: 5px 0px 0px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.u-migrated-9ac18f {
+  margin: 0px 0px 0px -5px !important;
+  width: 65px !important;
+  height: 65px !important;
+}
+.u-migrated-a01f09 {
+  margin: 0px 0px 5px !important;
+  font-size: 29px !important;
+}
+.u-migrated-a963f0 {
+  color: rgb(255, 255, 255) !important;
+}
+.u-migrated-a98a92 {
+  padding: 0px !important;
+  width: 278px !important;
+}
+.u-migrated-b15153 {
+  width: 56px !important;
+  margin: 11px 0px 0px !important;
+}
+.u-migrated-b32ad8 {
+  margin: 12px 0px 0px !important;
+  width: 56px !important;
+}
+.u-migrated-b379a5 {
+  padding: 7px 14px !important;
+}
+.u-migrated-b6d72e {
+  width: 206px !important;
+  height: 74px !important;
+}
+.u-migrated-b8b0aa {
+  width: 90px !important;
+  height: 60px !important;
+  margin: 0px 0px 0px -12px !important;
+}
+.u-migrated-bff689 {
+  margin: 0px 0px 9px !important;
+  height: 81px !important;
+}
+.u-migrated-c2aa27 {
+  padding: 0px 28px 0px 0px !important;
+}
+.u-migrated-c5db2d {
+  padding: 0px 15px !important;
+  height: 80px !important;
+}
+.u-migrated-c6a1c8 {
+  width: 167px !important;
+  margin: 0px 24px 9px 0px !important;
+}
+.u-migrated-c92831 {
+  color: rgb(0, 0, 0) !important;
+}
+.u-migrated-cc5194 {
+  padding: 0px 40px !important;
+}
+.u-migrated-ce9cf9 {
+  padding: 16px 20px 16px 57px !important;
+}
+.u-migrated-d19e55 {
+  border-width: 1px !important;
+  padding: 1px 15px 15px !important;
+  height: 105px !important;
+}
+.u-migrated-d29286 {
+  margin: -14px 0px 25px !important;
+}
+.u-migrated-d73489 {
+  margin: 0px !important;
+}
+.u-migrated-d891ed {
+  padding: 96px 0px 88px !important;
+}
+.u-migrated-da2c47 {
+  width: 178px !important;
+  margin: 0px 0px 18px !important;
+}
+.u-migrated-da3238 {
+  padding: 0px 29px 0px 0px !important;
+}
+.u-migrated-dc5554 {
+  padding: 27px 24px 26px !important;
+}
+.u-migrated-dc97a5 {
+  margin: 0px 0px 125px !important;
+  height: 426px !important;
+}
+.u-migrated-de8663 {
+  padding: 28px !important;
+  width: 417px !important;
+  height: 264px !important;
+}
+.u-migrated-e07649 {
+  padding: 0px 15px !important;
+}
+.u-migrated-e3d3ba {
+  color: rgb(19, 86, 196) !important;
+}
+.u-migrated-e4cebb {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  padding: 0px !important;
+  margin: -41px 0px 0px !important;
+}
+.u-migrated-e6868f {
+  padding: 10px 20px 1px !important;
+  height: 112px !important;
+}
+.u-migrated-ecd3b5 {
+  font-size: 45px !important;
+}
+.u-migrated-edc47d {
+  margin: 34px 0px 0px !important;
+  font-size: 14px !important;
+}
+.u-migrated-ee3d2f {
+  width: 40px !important;
+  height: 40px !important;
+  margin: 32px 0px 0px !important;
+}
+.u-migrated-f0e118 {
+  padding: 0px 28px 0px 0px !important;
+  height: 81px !important;
+}
+.u-migrated-f3d353 {
+  width: 475px !important;
+}
+.u-migrated-f3d430 {
+  margin: 0px 0px 3px !important;
+}
+.u-migrated-f6cd24 {
+  padding: 44px 18px 46px !important;
+}
+.u-migrated-f79dd6 {
+  width: 481px !important;
+}
+.u-migrated-f9f1e2 {
+  margin: 50px -18px -46px !important;
+  border-radius: 0 !important;
+}
+.u-migrated-fe39f4 {
+  height: 112px !important;
+  padding: 10px 20px 20px !important;
+}
+.u-migrated-feab3f {
+  padding: 16px 20px 16px 31px !important;
+}
+.u-migrated-feb45d {
+  margin: 27px 0px 28px !important;
 }
