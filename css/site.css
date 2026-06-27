@@ -1680,6 +1680,10 @@ details.faq .ans { padding: 0 16px 16px 51px; color: var(--muted); font-size: .8
 /* Hero mockup correction: keep the laptop/phone image as a compact foreground
    element so it does not visually collide with the standing person photo. */
 @media (min-width: 900px) {
+  main#top.u-migrated-1de800 {
+    height: auto !important;
+  }
+
   .hero-laptop-slot {
     width: clamp(360px, 31vw, 470px) !important;
     height: clamp(230px, 23vw, 320px) !important;
