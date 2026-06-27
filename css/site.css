@@ -370,17 +370,8 @@ image-slot { --_b: var(--slot-bg); }
   display: flex; gap: 18px; align-items: flex-start;
 }
 .reason-card image-slot { width: 56px; height: 56px; flex: none; }
-/* Recolor the (grey, line-art) icon: hide the raster, then paint the frame in
-   the chosen color and mask it to the icon shape (--icon-src is set per slot
-   from JS). Only filled slots are recolored. */
-.reason-card image-slot[data-filled]::part(image) { visibility: hidden; }
-.reason-card image-slot[data-filled]::part(frame) {
-  background-color: var(--reason-icon-line, var(--brand));
-  -webkit-mask-image: var(--icon-src); mask-image: var(--icon-src);
-  -webkit-mask-size: contain; mask-size: contain;
-  -webkit-mask-position: center; mask-position: center;
-  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
-}
+.reason-card image-slot[data-filled]::part(image) { visibility: visible; }
+.reason-card image-slot[data-filled]::part(frame) { background-color: transparent; }
 .reason-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .reason-card p { color: var(--muted); font-size: .9rem; }
 .reason-card.featured {
@@ -412,7 +403,7 @@ image-slot { --_b: var(--slot-bg); }
   .reason-card.featured { animation: none; }
 }
 .reason-card.featured image-slot { width: 76px; height: 76px; position: relative; z-index: 1; }
-.reason-card.featured image-slot[data-filled]::part(frame) { background-color: #ffffff; }
+.reason-card.featured image-slot[data-filled]::part(frame) { background-color: transparent; }
 .reason-card.featured h3 { position: relative; z-index: 1; }
 .reason-card.featured p { color: rgba(255,255,255,.85); position: relative; z-index: 1; }
 .reason-card.featured strong {
